@@ -1,0 +1,48 @@
+<h3>Create User Account</h3>
+<form [formGroup]="userForm" (ngSubmit)="createEvent()">
+  <div class="row mt-4">
+    <div class="col-md-8">
+
+      <h4>{{message}}</h4>
+
+      <div class="row mt-2">
+        <label class="col-md-3 text-md-end">First Name:</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" formControlName="firstName" placeholder="First name"/>
+          <small style="color: red;" *ngIf="f('firstName')">Enter First Name</small>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <label class="col-md-3 text-md-end">Last Name:</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" formControlName="lastName" placeholder="Last name"/>
+          <small style="color: red;" *ngIf="f('lastName')">Enter Last Name</small>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <label class="col-md-3 text-sm-end">Username:</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" formControlName="username" placeholder="Username"/>
+          <small style="color: red;" *ngIf="f('username')">Enter username</small>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <label class="col-md-3 text-sm-end">Password:</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" formControlName="password" placeholder="Password"/>
+          <small style="color: red;" *ngIf="f('password')">Enter Password</small>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-3 offset-md-9">
+          <button class="btn btn-success btn-lg" type="submit">Post</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>

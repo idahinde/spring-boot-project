@@ -1,0 +1,50 @@
+<h1>User Details</h1>
+<h4 style="color: green;">{{msg}}</h4>
+<div class="row">
+  <div class="col-md-7">
+    <div class="table-responsive">
+      <table class="table">
+        <tbody>
+        <tr>
+          <td width="109"><label>User Id:</label></td>
+          <td><label>{{userdata.userId}}</label></td>
+        </tr>
+        <tr>
+          <td><label>Full Name:</label></td>
+          <td><label>{{userdata.firstName}} {{userdata.lastName}}</label></td>
+        </tr>
+        <tr>
+          <td><label>Username:</label></td>
+          <td><label>{{userdata.username}}</label></td>
+        </tr>
+        <tr>
+          <td><label>Password:</label></td>
+          <td><label>{{userdata.password}}</label></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td colspan="2" align="right">
+            <button class="btn btn-success" (click)="shareEvent()" type="button">Share</button>
+            <div class="table-responsive">
+              <table *ngIf="isShowShare" class="table">
+                <tbody>
+                <tr>
+                  <td><label (click)="shareDatEvent('WhatsApp')">WhatsApp</label></td>
+                </tr>
+                <tr>
+                  <td><label (click)="shareDatEvent('Facebook')">Facebook</label></td>
+                </tr>
+                <tr>
+                  <td><label (click)="shareDatEvent('Google')">Google</label></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
